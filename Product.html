@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Page</title>
+</head>
+
+<body>
+
+    <h1>Product Page</h1>
+
+    <div id="product"></div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productName = urlParams.get('name');
+
+        const products = [
+            { name: 'Product 1', category: 'Category 1', image: ['product1.jpg', "product2"], description: 'This is the description for Product 1.' },
+            { name: 'Product 2', category: 'Category 1', image: 'product2.jpg', description: 'This is the description for Product 2.' },
+            { name: 'Product 3', category: 'Category 1', image: 'product3.jpg', description: 'This is the description for Product 3.' },
+            { name: 'Product 4', category: 'Category 2', image: 'product4.jpg', description: 'This is the description for Product 4.' },
+            { name: 'Product 5', category: 'Category 2', image: 'product5.jpg', description: 'This is the description for Product 5.' },
+            { name: 'Product 6', category: 'Category 2', image: 'product6.jpg', description: 'This is the description for Product 6.' },
+            { name: 'Product 7', category: 'Category 3', image: 'product7.jpg', description: 'This is the description for Product 7.' },
+            { name: 'Product 8', category: 'Category 3', image: 'product8.jpg', description: 'This is the description for Product 8.' },
+            { name: 'Product 9', category: 'Category 3', image: 'product9.jpg', description: 'This is the description for Product 9.' }
+        ];
+
+        const product = products.find(p => p.name === productName);
+
+        const productElement = document.createElement('div');
+        productElement.className = 'product';
+        productElement.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <p>${product.description}</p>
+      `;
+        document.getElementById('product').appendChild(productElement);
+    </script>
+
+</body>
+
+</html>

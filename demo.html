@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Categories</title>
+</head>
+
+<body>
+
+    <h1>Product Categories</h1>
+
+    <button onclick="showProductsByCategory('Wall Decor')">Wall Decor</button>
+    <button onclick="showProductsByCategory('Category 2')">Category 2</button>
+    <button onclick="showProductsByCategory('Category 3')">Category 3</button>
+
+    <div id="products"></div>
+    ''
+    <script>
+        const products = [
+            { name: 'Wrought Iron Banana Leaf Wall Art In Green', category: 'Wall Decor', image: 'https://ii1.pepperfry.com/media/catalog/product/g/r/1600x1760/green--iron-banana-leaf-wall-art-by-the-shining-rays-green--iron-banana-leaf-wall-art-by-the-shining-tmzwen.jpg', shop: 'Fabindia', price: "Rs. 1,299" },
+            { name: 'Coloured Fish Handmade & Hand-Painted Wall Hanging', category: 'Category 2', image: 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-002-127_A_1800x1800.jpg?v=1568953176', price: "Rs. 999" },
+            { name: 'Warli Handpainted Pots With Sheesham Wooden Frame Wall Hanging', category: 'Wall Decor', image: 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-002-001_a_3_1800x1800.jpg?v=1570516510', shop: 'Fabindia', price: "Rs. 3,052" },
+            { name: 'ron Framed Butterfly Queen Wall Art With LED In Gold', category: 'Wall Decor', image: 'https://ii1.pepperfry.com/media/catalog/product/b/u/1600x1760/butterfly-queen-with-led-by-the-shining-rays-butterfly-queen-with-led-by-the-shining-rays-hpgk9m.jpg', price: "Rs. 2,899" },
+            { name: 'Madhubani Hand-Painted Key Holder In Sheesham & Teak Wood (6 Hooks)', category: 'Wall Decor', image: 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-012-057_a_1800x1800.jpg?v=1570516277', price: "Rs. 1,799" },
+            { name: 'Shaped Warli & Dhokra Wooden Name Plate With Handwritten Fonts', category: 'Wall Decor', image: 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-002-084_a_1800x1800.jpg?v=1570516288', shop: 'Fabindia', price: "Rs. 3,788" },
+            { name: 'Dhokra And Warli Handpainted Wall Hanging Set', category: 'Wall Decor', image: 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-002-018_a_4_1800x1800.jpg?v=1570516491', price: "Rs. 3,999" },
+            { name: 'Glories of Ganesha Handmade & Hand-painted Wall Hanging In Iron', category: 'Wall Decor', image: 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/glories-of-ganesha-handmade-_-hand-painted-wall-hanging-in-iron_1_1800x1800.jpg?v=1650013776', shop: 'Fabindia', price: "Rs. 2,349" },
+            { name: 'Terracotta Warli Handpainted Pen Stand Knitted Red', category: 'Desk Decor', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-007-001_A_1800x1800.jpg?v=1600334244', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-007-001_B_1800x1800.jpg?v=1600334244'], shop: 'The Bombay Store', price: "Rs. 549" },
+            { name: 'Wooden Engraved & Carved Tree Of Life Book End', category: 'Desk Decor', image: ['https://exclusivelane.com/collections/desk-accessories/products/wooden-engraved-carved-tree-of-life-book-end-el-007-020', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-007-020_c_1_1800x1800.jpg?v=1570516420'], shop: 'The Bombay Store', price: "Rs. 1,499" },
+            { name: 'Dhokr-A-Rrange Hand-Painted Wooden Table Organiser With Brass Figurines', category: 'Desk Decor', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-007-038_a_1800x1800.jpg?v=1570516205', 'https://exclusivelane.com/collections/desk-accessories/products/dhokr-a-rrange-hand-painted-wooden-table-organiser-with-brass-figurines-el-007-038'], shop: 'Anokhi', price: "Rs. 1,899" },
+            { name: 'Cane Handwoven Pen Holder In Sheesham Wood & Iron', category: 'Desk Decor', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-007-052_a_1800x1800.jpg?v=1570515881', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-007-052_b_1800x1800.jpg?v=1570515881'], shop: 'The Bombay Store', price: "Rs. 879" },
+            { name: 'The Brownie Lap Handcrafted Laptop Stand In Sheesham Wood', category: 'Desk Decor', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-010-028_A_1800x1800.jpg?v=1570685349', 'https://exclusivelane.com/collections/desk-accessories/products/the-brownie-lap-handcrafted-laptop-stand-in-sheesham-wood-el-010-028'], shop: 'The Bombay Store', price: "Rs. 722" },
+            { name: 'The Victorious Elephant Hand Carved Stapler Cum Showpiece In Cedar Wood', category: 'Desk Decor', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-007-056_a_1800x1800.jpg?v=1570515877', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-007-056_b_1800x1800.jpg?v=1570515877'], shop: 'Fabindia', price: "Rs. 836" },
+            { name: 'Shankh Shaped Terracotta Handpainted Tea Light Holder', category: 'Lighting', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-008-050_a_4_1800x1800.jpg?v=1570516403', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-008-050_e_4_1800x1800.jpg?v=1570516403'], shop: 'The Bombay Store', price: "Rs. 775" },
+            { name: 'Dhokra And Warli Handpainted Wooden Lamp Brown', category: 'Lighting', image: ['https://exclusivelane.com/collections/all-lighting/products/20-inch-dhokra-and-warli-handpainted-wooden-lamp-brown-el-003-038', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-003-038_b_2_1800x1800.jpg?v=1570516475'], shop: 'The Bombay Store', price: "Rs. 4,209" },
+            { name: 'Hanging Bottle Shaped Handapinted Terracotta Tea Light Holder', category: 'Lighting', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-008-047_a_1800x1800.jpg?v=1570516428', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-008-047_c_1800x1800.jpg?v=1570516428'], shop: 'Fabindia', price: "Rs. 799 " },
+            { name: 'Handcrafted Warli & Dhokra Art Wall Lamp', category: 'Lighting', image: ['https://exclusivelane.com/collections/all-lighting/products/handcrafted-warli-dhokra-art-wall-lamp-el-003-120', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-003-120_c_1800x1800.jpg?v=1570516357'], shop: 'The Bombay Store', price: "Rs. 876" },
+            { name: 'Moroccan Shimmer Hand Etched Iron Table Lamp', category: 'Lighting', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-003-185_A_1800x1800.jpg?v=1583559927', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-003-185_B_1800x1800.jpg?v=1583559927'], shop: 'The Bombay Store', price: "Rs. 1,675" },
+            { name: 'Glowing Curved Handcrafted Wall Sconce Tea-Light Holders In Iron', category: 'Lighting', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-008-237_A_1800x1800.jpg?v=1583559595', 'https://exclusivelane.com/collections/all-lighting/products/glowing-curved-handcrafted-wall-sconce-tea-light-holders-in-iron-set-of-2-el-008-237'], shop: 'Anokhi', price: "Rs. 1,870" },
+            { name: 'Tribal Dhokra Lady Bohemian Brass Necklace Handmade In Dhokra Art', category: 'jewellery', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-031-039_A_1800x1800.jpg?v=1601457609', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-031-039_B_1800x1800.jpg?v=1601457609'], shop: 'jaypore', price: "Rs. 1069" },
+            { name: 'Dramatic Kundan Chandbali Earrings', category: 'jewellery', image: ['https://worldartcommunity.com/images/item-images/item_image_a8c38867d3a30dc13c648d5d0a3003f7.jpg', 'https://worldartcommunity.com/images/item-images/item_image_75260850055395bb515273825a0c80f1.jpg'], shop: 'jaypore', price: "Rs. 1,125" },
+            { name: 'GREEN MEENAKARI INDIAN ENAMEL JHUMKA', category: 'jewellery', image: ['https://worldartcommunity.com/images/item-images/item_image_7d53a1238e6fd9ff9e12c752ae9ea283.JPG', 'https://worldartcommunity.com/images/item-images/item_image_a1362b50146c7a965c834e791c31a3a4.JPG'], shop: 'jaypore', price: "Rs. 899" },
+            { name: '"Tribal Men Trio" Bohemian Brass Necklace Handcrafted In Dhokra Art', category: 'jewellery', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-031-023_A_1800x1800.jpg?v=1580469361', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-031-023_D_1800x1800.jpg?v=1580469361'], shop: 'Fabindia', price: "Rs. 1,021" },
+            { name: 'Symphony of Owls ohemian Handpainted Necklace In Recycled Wood', category: 'jewellery', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-031-044_A_1800x1800.jpg?v=1633422967', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-031-044_B_1800x1800.jpg?v=1633422967'], shop: 'Anokhi', price: "Rs. 1,069 " },
+            { name: 'Symphony of Owls Bohemian Handpainted Earrings In Recycled Wood', category: 'jewellery', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-030-067_A_1800x1800.jpg?v=1633422833', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-030-067_B_1800x1800.jpg?v=1633422833'], shop: 'Anokhi', price: "Rs. 522" },
+            { name: 'Meenakari Royal Blue Elephant Family Handenamelled In Metal', category: 'show-piece', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-025-004_a_2_1800x1800.jpg?v=1570516416', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-025-004_b_2_1800x1800.jpg?v=1570516416'], shop: 'Fabindia', price: "Rs. 1,022" },
+            { name: 'Folk Music Mahotsav Handpainted Decorative Showpieces', category: 'show-piece', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-025-114_A_1800x1800.jpg?v=1629786224', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-025-114_B_1800x1800.jpg?v=1629786224'], shop: 'Anokhi', price: "Rs. 1,249" },
+            { name: 'Rajasthani Tribal Majdoor Ladies Hand-painted Tea Light Holder Cum Showpiece', category: 'show-piece', image: ['https://exclusivelane.com/collections/showpieces-idols/products/rajasthani-tribal-majdoor-ladies-hand-painted-tea-light-holder-cum-showpiece-set-of-4-iron-14-inch-el-008-274', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-008-274_B_1800x1800.jpg?v=1626164443'], shop: 'Anokhi', price: "Rs. 2,341" },
+            { name: 'Meditating Face" Hand Carved Wooden Sculpture Showpiece', category: 'show-piece', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-025-083_A_1800x1800.jpg?v=1592559197', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-025-083_B_1800x1800.jpg?v=1592559198'], shop: 'The Bombay Store', price: "Rs. 841" },
+            { name: 'Rajasthani Folk Artist Hand-painted Decorative Showpiece', category: 'show-piece', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-025-094_A_1800x1800.jpg?v=1626163355', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-025-094_B_1800x1800.jpg?v=1626163354'], shop: 'Fabindia', price: "Rs. 999" },
+            { name: 'Rajasthani Kalbeliya Folk Dance Girl Handpainted Decorative Showpiece In Iron ', category: 'show-piece', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/rajasthani-kalbeliya-folk-dance-girl-handpainted-decorative-showpiece-in-iron-14_1_1800x1800.jpg?v=1650015381', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/rajasthani-kalbeliya-folk-dance-girl-handpainted-decorative-showpiece-in-iron-14_3_900x.jpg?v=1650015381'], shop: 'The Bombay Store', price: "Rs. 1199" },
+            { name: 'Floral Block Hand Carved Towel Ring Holder In Sheesham Wood', category: 'Bath', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-022-066_A_1800x1800.jpg?v=1604379457', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-022-066_B_1800x1800.jpg?v=1604379457'], shop: 'Anokhi', price: "Rs. 1499" },
+            { name: 'The Hut Essentials Hand-Painted Ceramic Bathroom Accessory', category: 'Bath', image: ['https://exclusivelane.com/collections/bath/products/the-hut-essentials-hand-painted-ceramic-bathroom-accessory-set-of-3-el-022-025', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-022-025_b_1800x1800.jpg?v=1570516049'], shop: 'The Bombay Store', price: "Rs.1599" },
+            { name: 'Moroccan Essentials Handpainted Ceramic Bathroom Accessory', category: 'Bath', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-022-015_b_1800x1800.jpg?v=1570516180', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-022-015_a_1800x1800.jpg?v=1570516180'], price: "Rs. 899" },
+            { name: 'Owl Motif Towel Holder', category: 'Bath', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-022-023_a_1_1800x1800.jpg?v=1570516090', 'https://exclusivelane.com/collections/bath/products/owl-motif-towel-holder-upto-3-towels-el-022-023'], shop: 'Anokhi', price: "Rs. 549" },
+            { name: 'Owl Motif Tissue Roll Holder', category: 'Bath', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-022-024_a_1800x1800.jpg?v=1570516091', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-022-024_b_1800x1800.jpg?v=1570516091'], shop: 'Fabindia', price: "Rs. 899" },
+            { name: 'Motherly Owl Handcrafted Towel Holder in Gular Wood', category: 'Bath', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-022-074_A_1800x1800.jpg?v=1622535500', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-022-074_B_1800x1800.jpg?v=1622535500'], shop: 'Anokhi', price: "Rs. 1,000" }
+        ];
+
+        
+        
+        function showProductsByCategory(category) {
+            const productContainer = document.getElementById('products');
+            productContainer.innerHTML = '';
+            const categoryProducts = products.filter(product => product.category === category);
+            for (const product of categoryProducts) {
+                const productElement = document.createElement('div');
+                productElement.className = 'product';
+                productElement.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+          `;
+                productElement.addEventListener('click', () => {
+                    const productPageUrl = `product.html?name=${encodeURIComponent(product.name)}`;
+                    window.location.href = productPageUrl;
+                });
+                productContainer.appendChild(productElement);
+            }
+        }
+        const shops = [
+        {name: "shopname", image:["image1", "image2"], desc:"lorem"},
+        {name: "shopname", image:["image1", "image2"], desc:"lorem"},
+        {name: "shopname", image:["image1", "image2"], desc:"lorem"},
+        {name: "shopname", image:["image1", "image2"], desc:"lorem"},
+        {name: "shopname", image:["image1", "image2"], desc:"lorem"},
+        {name: "shopname", image:["image1", "image2"], desc:"lorem"},
+        ]
+    </script>
+
+
+</body>
+
+</html>

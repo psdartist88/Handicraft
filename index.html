@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handyy</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="loco.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="progress">
+            <div id="bar">
+                <div id="barconfirm"></div>
+            </div>
+            <div id="percent"></div>
+        </div>
+        <div id="wrapp">
+            <div id="Wrap">
+                <img class="FollowBox" src="./badhak.png" alt="">
+                <img class="FollowBox" src="./second.png" alt="">
+                <img class="FollowBox" src="./four (2).png" alt="">
+                <img class="FollowBox" src="./five.png" alt="">
+                <img class="FollowBox" src="./third.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="screen">
+        <div id="main">
+            <div id="sections">
+                <div id="nav">
+                    <img id="logo" src="./logo.png" alt="">
+                    <div id="right">
+                        <a href="#"><i class='bx bx-search'></i> Search</a>
+                        <a href="#"><i class='bx bxs-book-reader'></i> Craft Stories</a>
+                        <a href="#"><i class='bx bxs-offer'></i> Offers</a>
+                        <a href="#"><i class='bx bxs-user'></i> User</a>
+                        <a href="#"><i class='bx bxs-cart-alt'></i> Cart</a>
+                    </div>
+                </div>
+                <div id="section1" class="s">
+                    <div id="middle">
+                        <img id="ban1" src="./banner2.png" alt="">
+                        <img id="ban1" src="./banner1.png" alt="">
+                        <img id="ban1" src="./banner2.png" alt="">
+                        <img id="ban1" src="./banner1.png" alt="">
+                        <div id="but">
+                            <button class="prev"><i class='bx bxs-chevron-left'></i></button>
+                            <button class="next"><i class='bx bxs-chevron-right'></i></button>
+                        </div>
+                        <ul class="dots"></ul>
+                    </div>
+                    <div id="lower">
+                        <div id="bl">
+
+                            <h2 id="text">Shop on Budget</h2>
+                        </div>
+                        <img id="line"  src="./Products/cart.png" alt="">
+                        <div id="grid">
+                            <img id="p2" class="ppp6" src="./Products/cart.png" alt="">
+                            <img id="p1" class="ppp5" src="./Products/p1.png" alt="">
+                            <img id="p1" class="ppp4" src="./Products/p2.png" alt="">
+                            <img id="p1" class="ppp3" src="./Products/p4.png" alt="">
+                            <img id="p1" class="ppp2" src="./Products/p3.png" alt="">
+                            <img id="p1" class="ppp1" src="./Products/p5.png" alt="">
+                        </div>
+                        <img id="horas" src="./horse.gif">
+                    </div>
+                    <div id="text">
+                    
+                    </div>
+                    
+                    <script type="text/javascript">
+                        var i = 0, text;
+                        text = document.querySelector("#text").textContent +" ";
+                        function typing() {
+                            if (i < text.length) {
+                                document.getElementById("text").innerHTML += text.charAt(i);
+                                i++
+                                setTimeout(typing, 120);
+                                if(i==text.length){
+                                    i=0;
+                                    document.getElementById("text").innerHTML="";
+                                }
+                            }
+                        }
+                        typing();
+
+                    </script>
+                    <div id="lower2">
+                        <div id="space">
+                            <div id="blank"></div>
+                            <div id="heading">
+                                <h2 id="#text2">Bestselling Items</h2>
+                                <img id="line" src="./Products/cart.png" alt="">
+                            </div>
+                        </div>
+    
+                        <div id="grid">
+                            <img id="p1" src="./Products/bbp1.png" alt="">
+                            <img id="p1" src="./Products/bp2.png" alt="">
+                            <img id="p1" src="./Products/bp3.png" alt="">
+                            <img id="p1" src="./Products/bp4.png" alt="">
+                            <img id="p1" src="./Products/bp5.png" alt="">
+                            <img id="p3" src="./Products/bestseller.png" alt="">
+                        </div>
+                    </div>
+                    <script>
+                        var j = 0, text2;
+                        text2 = document.querySelector("#text2").textContent + " ";
+                        function typing2() {
+                            if (j < text.length) {
+                                document.getElementById("text2").innerHTML += text.charAt(j);
+                                j++
+                                setTimeout(typing, 120);
+                                if (j == text.length) {
+                                    j = 0;
+                                    document.getElementById("text2").innerHTML = "";
+                                }
+                            }
+                        }
+                        typing2();
+
+                    </script>
+                </div>
+                <div id="section2" class="s">
+                    <div id="pbox">
+                        
+                        <h1>Products</h1>
+                        <img id="line" src="./Products/cart.png" alt="">
+                        <div id="category">
+                            <button id="desk" onclick="showProductsByCategory('Desk Decor')">
+                                <p>HOME Decor</p>
+                            </button>
+                            <button onclick="showProductsByCategory('Lighting')">
+                                <p>Light Crafts</p>
+                            </button>
+                            <button onclick="showProductsByCategory('jewellery')">
+                                <p>Jewelry Crafts</p>
+                            </button>
+                            <button onclick="showProductsByCategory('show-piece')">
+                                <p>Show Case</p>
+                            </button>
+                            <button onclick="showProductsByCategory('Bath')">
+                                <p>Bath Crafts</p>
+                            </button>
+                            <button onclick="showProductsByCategory('Wall Decor')">
+                                <p>Wall Decor</p>
+                            </button>
+                        </div>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                document.getElementById("desk").click();
+                            });
+                        </script>
+                    </div>
+                    <div id="products"></div>
+                    
+                </div>
+            
+                <div id="section4" class="s">
+                    <div class="menu">
+                        <div class="menu__item">
+                            <div class="marquee">
+                                <div class="marquee__inner">
+                                    <span>"From the hands of makers to your doorstep."</span>
+                                    <span>"From the hands of makers to your doorstep."</span>
+                                    <span>"From the hands of makers to your doorstep."</span>
+                                    <span>"From the hands of makers to your doorstep."</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div >
+                  
+
+                    <div id="r1">
+                        <video id="back" autoplay muted loop src="./karigar.mp4"></video>
+                    </div>
+                    <div id="l1">
+                        <div id="slider">
+                            <div class="slides">
+                                <img src="./poem1.png" height="100%" />
+                            </div>
+                        
+                            <div class="slides">
+                                <img src="poem2.png" height="100%" />
+                            </div>
+                        
+                            <div class="slides">
+                                <img src="./poem3.png"
+                                    height="100%" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="section5" class="s">
+                    <div id="pbox">
+                        <h1>Top Rated Stores</h1>
+                        <img id="line" src="./Products/cart.png" alt="">
+                    </div>
+    
+                    <div id="shops"></div>
+                </div>
+                <div id="section6" class="s">
+                    <canvas></canvas>
+                    <div>"Inspired by heritage, crafted by hand"</div>
+                    <p>( CLICK ON BLANK SPACES TO CHANGE FLUID COLOR )</p>
+                </div>
+    
+            </div>
+            <div id="bgimg">
+                <div id="bg">
+                    <img class="circle" id="c1" src="./circle1.png" alt="">
+                    <img class="circle" id="c2" src="./circle2.png" alt="">
+                    <img class="circle" id="c5" src="./circle2.png" alt="">
+                    <img class="circle" id="c3" src="./circle3.png" alt="">
+                    <img class="circle" id="c4" src="./circle3.png" alt="">
+                    <!-- <img src="./border.png" id="b1" alt="">
+                            <img src="./border.png" id="b1" class="bc2" alt="">
+                            <img src="./border.png" id="b1" class="bc3" alt=""> -->
+                    <img class="bg" src="./bg.jpg" alt="">
+    
+                </div>
+    
+            </div>
+            
+        </div>
+    </div>
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+    integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+    integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
