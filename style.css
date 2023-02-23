@@ -128,6 +128,7 @@ body::-webkit-scrollbar {
     width: 100vw;
     z-index: 100;
 }
+
 #nav #logo{
     height: 150%;
 }
@@ -155,6 +156,10 @@ body::-webkit-scrollbar {
 #right>a>i{
     font-size: 2.2vh;
     margin-right: 1vh;
+    
+} 
+#nav #menu {
+    display: none;
     
 }
 #middle{
@@ -239,14 +244,15 @@ body::-webkit-scrollbar {
     width: 75%;
 }
 #lower h2{
-    font-size: 2vw;
+    font-size: 4vh;
     font-family: "Cinzel";
     font-weight: 700;
     margin-top: 2vh;
     padding-left: 1vw;
 }
 #bl{
-    height: 15vw;
+    height: 20vh;
+    width: 20vw;
     overflow: hidden;
     margin-top: -1.4vh;
 
@@ -271,6 +277,7 @@ body::-webkit-scrollbar {
 }
 #grid{
     margin: 4vh 0 ;
+    width: 98%;
     height: 50vh;
     display: flex;
     align-items: center;
@@ -601,7 +608,7 @@ body::-webkit-scrollbar {
     top: 0;
 }
 #back{
-    width: 100%;
+    width: 100vw;
 }
 
 
@@ -609,7 +616,6 @@ body::-webkit-scrollbar {
     width: 100vw;
     height: 140vh;
     margin: 7vh 0;
-    margin-top: 7vh;
 }
 #shops {
     width: 100%;
@@ -917,7 +923,7 @@ margin-bottom: 0.5vh;
     z-index: 1;
     font-size: 70px;
     padding: 0;
-    
+    text-align: center;
 letter-spacing: 2px;
     font-family: 'Great Vibes', cursive;
     color: #fff;
@@ -1079,7 +1085,7 @@ letter-spacing: 2px;
     border: none;
     color: white;
     padding: 15px 30px;
-} */
+} 
 #website {
     padding: 5vh 0;
     height: 100%;
@@ -1172,7 +1178,7 @@ footer a:hover {
     text-align: center;
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px){
     #bgimg{
         height: 100vh;
     }
@@ -1181,23 +1187,135 @@ footer a:hover {
         object-fit: cover;
     }
     #middle{
-        margin-top: 10vh;
+        margin-top: 5vh;
         height: 20vh;
     }
     #lower{
         height: 40vh;
     }
     #lower h2{
-        font-size: 2vh;
+        font-size: 4.3vw;
     }
-        #lower #line {
-            width: 17vh;
-            height: 1vw;
-        }
+    #lower #line{
+        width: 23vh;
+        height: 1vw;
+        margin-top: -3vh;
+    }
+    #bl{
+        width: 25vh;
+        height: 15vh;
+    }
+    #horas{
+        transform: translate(-100%, 22%);
+    }
     #grid{
-        -webkit-overflow-scrolling: touch;
+        margin: -1vh 0; 
+        width: 90vw;
+        overflow: hidden;
+        overflow-x: scroll;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    #grid #p2{
+    #grid::-webkit-scrollbar {
         display: none;
     }
+    #grid #p2, #p3{
+        display: none;
+    }
+    #blank{
+        display: none;
+    }
+    #lower2{
+        margin-top: -3vh;
+    }
+    #lower2 h2{
+        font-size: 4.3vw;
+    }
+    #lower2 #line{
+        width: 25vh;
+        height: 1vw;
+        margin-top: -10vh;
+    }
+    #right{
+        display: none;
+    }
+    #nav #menu{
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+    }
+        #nav #menu>i{
+            font-size: 3vh;
+            color: #756854;
+        }
+    #nav #logo{
+        height: 12vh;
+    }
+    #nav{
+        height: 8vh;
+    }
+        #grid #p1:hover {
+            cursor: pointer;
+            margin-top: 0;
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+        }
+        #section2{
+            height: 250vh;
+        }
+    .product{
+        width: calc(100%);
+    }
+    .marquee{
+        margin-top: 2vh;
+        border-top: 0.3vh solid #1b1b1b;
+        border-bottom: 0.3vh solid #1b1b1b;
+        padding: 2vh;
+    }
+    .marquee span{
+        font-size: 5vw;
+    }
+    #section4{
+        height: 110vh;
+    }
+    #r1{
+        margin-top: -20vh;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    #back{
+        height: 120vh;
+        object-fit: cover;
+    }
+    #l1{
+        height: 20vh;
+    }
+    #section5{
+        margin-top: 3vh;
+        height: 210vh;
+        overflow: hidden;
+    }
+    #shopcard{
+        width: calc(100%);
+    }
+    #shopcard #detbox button{
+        width: 15vh;
+        height: 5vh;
+    }
+    #pbox h1{
+        font-size: 3.2vh;
+    }
+    #pbox #line{
+        width: 30vh;
+    }
+    #but button{
+        font-size: 3vw;
+        padding: 1.5vw;
+    }
+    #but button:hover{
+        font-size: 3vw;
+        padding: 2vw;
+    }
+    
 }
