@@ -9,12 +9,12 @@ const products = [
     { name: 'Shaped Warli & Dhokra Wooden Name Plate With Handwritten Fonts', category: 'Wall Decor', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-002-084_a_1800x1800.jpg?v=1570516288', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-002-084_a_1800x1800.jpg?v=1570516288'], shop: 'Fabindia', price: "Rs. 3,788", price2: "Rs. 2,999" },
     { name: 'Dhokra And Warli Handpainted Wall Hanging Set', category: 'Wall Decor', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-002-018_a_4_1800x1800.jpg?v=1570516491', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-002-018_a_4_1800x1800.jpg?v=1570516491'], price: "Rs. 3,999", price2: "Rs. 3,666" },
     { name: 'Glories of Ganesha Handmade & Hand-painted Wall Hanging In Iron', category: 'Wall Decor', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/glories-of-ganesha-handmade-_-hand-painted-wall-hanging-in-iron_1_1800x1800.jpg?v=1650013776', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/glories-of-ganesha-handmade-_-hand-painted-wall-hanging-in-iron_1_1800x1800.jpg?v=1650013776'], shop: 'Fabindia', price: "Rs. 2,349", price2: "Rs. 2,199" },
-    { name: 'Handpainted tribal couple ', category: 'Desk Decor', image: ['https://ii1.pepperfry.com/media/catalog/product/h/a/800x880/handpainted-tribal-couple-metallic-showpieceby-craft-tree-handpainted-tribal-couple-metallic-showpie-qj3hrc.jpg', 'https://ii1.pepperfry.com/media/catalog/product/h/a/1100x1210/handpainted-tribal-couple-metallic-showpieceby-craft-tree-handpainted-tribal-couple-metallic-showpie-ykjrcg.jpg'], shop: 'The Bombay Store', price: "Rs. 599", price2: "Rs. 449" },
-    { name: 'Handcrafted Recycled Material Elephant', category: 'Desk Decor', image: ['https://m.media-amazon.com/images/I/81PxikOZzqL._SL1500_.jpg', 'https://m.media-amazon.com/images/I/71bQTAviJyL._SL1500_.jpg'], shop: 'The Bombay Store', price: "Rs. 1,499", price2: "Rs. 1,399" },
-    { name: 'Handmade Camel Cart', category: 'Desk Decor', image: ['https://m.media-amazon.com/images/I/61CJFHpj9CL._SL1000_.jpg', 'https://m.media-amazon.com/images/I/81PQQmRftCL._SL1500_.jpg'], shop: 'Anokhi', price: "Rs. 1,899", price2: "Rs. 1,799" },
-    { name: 'Handemade "Village Farmer and his Wife', category: 'Desk Decor', image: ['https://m.media-amazon.com/images/I/61DBeGkU4+L._SL1080_.jpg', 'https://m.media-amazon.com/images/I/612wFHLV2kL._SL1500_.jpg'], shop: 'The Bombay Store', price: "Rs. 879", price2: "Rs. 799" },
-    { name: 'Ganesh Decorative Showpiece ', category: 'Desk Decor', image: ['https://rukminim1.flixcart.com/image/416/416/xif0q/showpiece-figurine/m/j/r/dq-1007-01-dequera-original-imaghdzchpww2cht.jpeg?q=70', 'https://rukminim1.flixcart.com/image/416/416/xif0q/showpiece-figurine/l/c/g/dq-1007-01-dequera-original-imaghdzcyffvgfg3.jpeg?q=70'], shop: 'The Bombay Store', price: "Rs. 722", price2: "Rs. 699" },
-    { name: 'Tribal rustic Pot-faces', category: 'Desk Decor', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-004-016_A_1800x1800.jpg?v=1598086298', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-004-016_D_1800x1800.jpg?v=1598086297'], shop: 'Fabindia', price: "Rs. 999", price2: "Rs. 799" },
+    { name: 'Handpainted tribal couple ', category: 'Desk Decor', image: ['https://m.media-amazon.com/images/I/51bchF-joZL.jpg', 'https://m.media-amazon.com/images/I/51qD7PrZfLS.jpg'], shop: 'The Bombay Store', price: "Rs. 599", price2: "Rs. 449" },
+    { name: 'Rattan Seagrass Paper Raffia', category: 'Desk Decor', image: ['https://m.media-amazon.com/images/I/913CjGjR7TL._SL1500_.jpg', 'https://m.media-amazon.com/images/I/91BWkOp-ftL._SL1500_.jpg'], shop: 'The Bombay Store', price: "Rs. 879", price2: "Rs. 799" },
+    { name: 'Rainbow Wall Hanging', category: 'Desk Decor', image: ['https://m.media-amazon.com/images/I/71liqdFhD7L._AC_SL1500_.jpg', 'https://m.media-amazon.com/images/I/61kSz7MgDRL._SL1100_.jpg'], shop: 'The Bombay Store', price: "Rs. 722", price2: "Rs. 699" },
+    { name: 'Living with Nature Helmet', category: 'Desk Decor', image: ['https://m.media-amazon.com/images/I/613JHJ3BorL._SL1210_.jpg', 'https://m.media-amazon.com/images/I/61fVkRlYzmL._SL1210_.jpg'], shop: 'The Bombay Store', price: "Rs. 1,499", price2: "Rs. 1,399" },
+    { name: 'Madhubani Handpainted Bottle', category: 'Desk Decor', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-006-056_a_1_1800x1800.jpg?v=1570516431', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-006-056_b_1_1800x1800.jpg?v=1570516431'], shop: 'Fabindia', price: "Rs. 999", price2: "Rs. 799" },
+    { name: 'Wicker Rattan Cane Webbing', category: 'Desk Decor', image: ['https://m.media-amazon.com/images/I/71egKYOLInL._SL1500_.jpg', 'https://m.media-amazon.com/images/I/710y7zRC-VL._SL1080_.jpg'], shop: 'Anokhi', price: "Rs. 1,899", price2: "Rs. 1,799" },
     { name: 'Shankh Shaped Terracotta Handpainted Tea Light Holder', category: 'Lighting', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-008-050_a_4_1800x1800.jpg?v=1570516403', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-008-050_e_4_1800x1800.jpg?v=1570516403'], shop: 'The Bombay Store', price: "Rs. 775", price2: "Rs. 699" },
     { name: 'Dhokra And Warli Handpainted Wooden Lamp Brown', category: 'Lighting', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-003-038_a_3_1800x1800.jpg?v=1570516474', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-003-038_b_2_1800x1800.jpg?v=1570516475'], shop: 'The Bombay Store', price: "Rs. 4,209", price2: "Rs. 3,999" },
     { name: 'Hanging Bottle Shaped Handapinted Terracotta Tea Light Holder', category: 'Lighting', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-008-047_a_1800x1800.jpg?v=1570516428', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-008-047_c_1800x1800.jpg?v=1570516428'], shop: 'Fabindia', price: "Rs. 799 ", price2: "Rs. 649" },
@@ -46,8 +46,8 @@ const products = [
     { name: '"Twisted Tribal Warli" Bohemian Earrings Hand-painted In Warli Art', category: 'jewellery', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-030-024_A_1800x1800.jpg?v=1579778210', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-030-024_B_1800x1800.jpg?v=1579778210'], shop: 'jaypore', price: "Rs. 599", price2: "Rs. 555" },
     { name: '"Tribal Men Faces" Bohemain Brass & Cane Earrings Handcrafted In Dhokra Art', category: 'jewellery', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-030-022_A_1800x1800.jpg?v=1579776971', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-030-022_B_1800x1800.jpg?v=1579776971'], shop: 'jaypore', price: "Rs. 2,999", price2: "Rs. 2,499" },
     { name: 'Amber & Teal Studio Pottery Candle Holder In Ceramic', category: 'Lighting', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-008-228_A_9119bcf6-5566-403c-a6f8-79a246868e22_1800x1800.jpg?v=1584681646', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-008-228_B_d7f361b2-f60b-485d-8af6-971ecc567e3f_1800x1800.jpg?v=1584681646'], shop: 'Anokhi', price: "Rs. 699", price2: "Rs. 555" },
-    { name: 'Tamatina Kalamkari Art', category: 'Desk Decor', image: ['https://m.media-amazon.com/images/I/91jLk1AT1HL._SL1500_.jpg', 'https://m.media-amazon.com/images/I/713ckpnAWDL._SL1152_.jpg'], shop: 'Fabindia', price: "Rs. 4999", price2: "Rs. 3599" },
-    { name: 'Ruchit Handicraft Planter Pot', category: 'Desk Decor', image: ['https://m.media-amazon.com/images/I/51lbHoO7XcL.jpg', 'https://m.media-amazon.com/images/I/51+n+CT6ejL.jpg'], shop: 'The Bombay Store', price: "Rs. 1299", price2: "Rs. 999" },
+    { name: 'Sabai Grass Planter Small', category: 'Desk Decor', image: ['https://cdn.shopify.com/s/files/1/0579/6836/1670/products/8.jpg?v=1632913894', 'https://m.media-amazon.com/images/I/713ckpnAWDL._SL1152_.jpg'], shop: 'Fabindia', price: "Rs. 1,399", price2: "Rs. 999" },
+    { name: 'Aluminium Hand painted Tea/Coffee', category: 'Desk Decor', image: ['https://indha.in/wp-content/uploads/2021/12/4O0A1052-scaled.jpg', 'https://m.media-amazon.com/images/I/51+n+CT6ejL.jpg'], shop: 'The Bombay Store', price: "Rs. 1299", price2: "Rs. 999" },
     { name: '"Rustic Mughal Door" Handcrafted Tea-Light Holder & Hanging Pillar Candle In Iron', category: 'Lighting', image: ['https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-008-182_A_1800x1800.jpg?v=1569909829', 'https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-008-182_C_1800x1800.jpg?v=1569909829'], shop: 'Fabindia', price: "Rs. 650", price2: "Rs. 599" },
 ];
 
@@ -60,8 +60,9 @@ function showProductsByCategory(category) {
         productElement.className = 'product';
         productElement.innerHTML = `
             <div id="imgbox">
-                <img id="image1" src="${product.image[0]}" alt="${product.name}">
-                <img id="image2" src="${product.image[1]}" alt="${product.name}">
+            <div id="cov">
+            <img id="image1" src="${product.image[0]}" alt="${product.name}">
+            </div>
             </div>
             <div id="detbox">
             <h3 id="pname">${product.name}</h3>
@@ -115,7 +116,7 @@ shops.forEach(shop => {
     cardContainer.innerHTML += shopHTML;
 });
 
-function init() {
+function scroll() {
     gsap.registerPlugin(ScrollTrigger);
 
     const locoScroll = new LocomotiveScroll({
@@ -148,10 +149,28 @@ function init() {
 
     ScrollTrigger.refresh();
 }
-init();
+scroll();
 
 
-
+// document.querySelector("#products")
+//     .forEach(function (product) {
+//         console.log(product)
+//         product.addEventListener("mouseenter", function (dets) {
+//             console.log(dets.target)
+//             gsap.to(dets.target.children[0].children[0].children[1], {
+//                 width: "100%",
+//                 ease: Expo.easeInOut,
+//                 duration: 2
+//             })
+//         })
+//         product.addEventListener("mouseleave", function (dets) {
+//             gsap.to(dets.target.children[0].children[0].children[1], {
+//                 width: "0",
+//                 ease: Expo.easeInOut,
+//                 duration: 2
+//             })
+//         })
+//         })
 
 
 document.querySelectorAll("#middle").forEach((container) => {
@@ -440,6 +459,14 @@ function changeSlide() {
 
 changeSlide();
 
+function myFunction(){
+    var x = document.getElementById("right");
+    if (x.style.display === "block"){
+        x.style.display = "none";
+    }else{
+        x.style.display = "block";
+    }
+}
 
 
 
